@@ -1,0 +1,74 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    background: #eee;
+}
+
+.colorGame {
+    width: 100%;
+    max-width: 500px;
+    background: #ccb0b0;
+    height: 600px;
+    padding: 30px;
+    border-radius: 20px;
+}
+
+#colorBox {
+    width: 100px;
+    height: 100px;
+    margin: 20px auto;
+    border: 2px solid #000;
+}
+
+#colorOption {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+.hidden {
+    opacity: 0;
+    transition: opacity 2s ease-out;
+}
+
+.celebrate {
+    animation: celebrateEffect 1s ease-out forwards;
+}
+
+@keyframes celebrateEffect {
+    0% {
+        transform: scale(1);
+        color: green;
+    }
+    50% {
+        transform: scale(1.5);
+        color: yellow;
+    }
+    100% {
+        transform: scale(1);
+        color: green;
+    }
+}
