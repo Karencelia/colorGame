@@ -54,21 +54,4 @@ button:hover {
     transition: opacity 2s ease-out;
 }
 
-.celebrate {
-    animation: celebrateEffect 1s ease-out forwards;
-}
 
-@keyframes celebrateEffect {
-    0% {
-        transform: scale(1);
-        color: green;
-    }
-    50% {
-        transform: scale(1.5);
-        color: yellow;
-    }
-    100% {
-        transform: scale(1);
-        color: green;
-    }
-}

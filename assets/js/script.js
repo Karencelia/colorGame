@@ -9,6 +9,10 @@ const scoreDisplay = document.getElementById("score");
 const newGameButton = document.getElementById("newGameButton");
 
 
+gameStatus.style.paddingTop = "10px";
+newGameButton.style.borderRadius = "5px"
+newGameButton.style.marginTop = "30px";
+
 function shuffleArray(array) {
     for (let i = array.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
@@ -24,7 +28,7 @@ function startGame() {
 
     targetColor = colors[Math.floor(Math.random() * colors.length)];
     colorBox.style.backgroundColor = targetColor;
-    gameStatus.textContent = "";
+    // gameStatus.textContent = "";
 
 
     colorOption.innerHTML = "";
@@ -54,17 +58,23 @@ function checkGuess(color) {
         gameStatus.classList.add("celebrate");
         score++;
         scoreDisplay.textContent = score;
+        confetti({
+            particleCount: 100,
+            spread: 70,
+            origin: { y: 0.6 }
+        });
+
         startGame();
     } else {
         gameStatus.textContent = "Aww.. That's Wrong! Try again.";
         gameStatus.style.color = "red";
         gameStatus.classList.add("hidden");
-
-        setTimeout(() => {
-            gameStatus.classList.remove("hidden");
-            gameStatus.textContent = "";
-        }, 1000);
     }
+    setTimeout(() => {
+        gameStatus.classList.remove("hidden");
+        gameStatus.classList.remove("celebrate");
+        gameStatus.textContent = "";
+    }, 1500);
 }
 
 
