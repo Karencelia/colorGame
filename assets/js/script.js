@@ -28,7 +28,6 @@ function startGame() {
 
     targetColor = colors[Math.floor(Math.random() * colors.length)];
     colorBox.style.backgroundColor = targetColor;
-    // gameStatus.textContent = "";
 
 
     colorOption.innerHTML = "";

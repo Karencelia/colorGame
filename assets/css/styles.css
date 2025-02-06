@@ -6,7 +6,8 @@
 
 body {
     text-align: center;
-    font-family: Arial, sans-serif;
+    font-family: "Poppins", serif;
+    font-weight: 400;
     height: 100vh;
     justify-content: center;
     align-items: center;
@@ -49,9 +50,11 @@ button:hover {
     opacity: 0.8;
 }
 
+.celebrate {
+    opacity: 0;
+    transition: opacity 2s ease-out;
+}
 .hidden {
     opacity: 0;
     transition: opacity 2s ease-out;
 }
-
-
