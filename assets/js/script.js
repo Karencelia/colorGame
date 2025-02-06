@@ -11,7 +11,7 @@ const newGameButton = document.getElementById("newGameButton");
 
 gameStatus.style.paddingTop = "10px";
 newGameButton.style.borderRadius = "5px"
-newGameButton.style.marginTop = "15px";
+newGameButton.style.marginTop = "8px";
 
 function shuffleArray(array) {
     for (let i = array.length - 1; i > 0; i--) {
